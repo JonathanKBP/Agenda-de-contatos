@@ -4,7 +4,7 @@ import {View, Text, StyleSheet } from 'react-native';
 const ContatoItem = props => {
   return(
     <View style={estilos.contatoNaLista}>
-        <Text>{props.contato}</Text>
+        <Text style={estilos.textoDaLista}>{props.contato[0]} : {props.contato[1]}</Text>
     </View>
   );
 }

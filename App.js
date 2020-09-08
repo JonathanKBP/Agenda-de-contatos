@@ -7,11 +7,11 @@ import ContatoInput from './components/ContatoInput';
 export default function App() {
 
   const [contatos, setContatos] = useState ([]);
-  const [contadorContatos, setContadorContatos] = useState (0);
+  const [contadorContatos, setContadorContatos] = useState (10);
 
   const adicionarContato = (contato) => {
     setContatos ((contatos) => {
-      setContadorContatos (contadorContatos + 1);
+      setContadorContatos (contadorContatos + 2);
       return [{key: contadorContatos.toString(), value:contato}, ...contatos]
     });
   }
@@ -27,6 +27,7 @@ export default function App() {
             <ContatoItem
               chave={contato.item.key} 
               contato={contato.item.value} 
+              
             />
           )
         }
@@ -57,6 +58,8 @@ const estilos = StyleSheet.create({
     textAlign: 'center' 
   },
   telaPrincipalView: {
-    padding: 50
+    padding: 50,
+    flex:1,
+    backgroundColor: '#f0f0f7'
   }
 });
