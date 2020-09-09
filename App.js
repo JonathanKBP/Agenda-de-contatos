@@ -16,6 +16,14 @@ export default function App() {
     });
   }
 
+  const removerContato = (KeyASerRemovida) => {
+    setContatos(contatos => {
+      return contatos.filter((contato) => {
+        return contato.key !== KeyASerRemovida
+      })
+    })
+  }
+
   return (
     <View style={estilos.telaPrincipalView}>
     <ContatoInput onAdicionarContato={adicionarContato}/>
@@ -27,7 +35,7 @@ export default function App() {
             <ContatoItem
               chave={contato.item.key} 
               contato={contato.item.value} 
-              
+              onDelete={removerContato}
             />
           )
         }

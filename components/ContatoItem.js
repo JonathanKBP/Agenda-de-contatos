@@ -1,11 +1,13 @@
 import React from 'react';
-import {View, Text, StyleSheet } from 'react-native';
+import {View, Text, StyleSheet,TouchableOpacity } from 'react-native';
 
 const ContatoItem = props => {
   return(
-    <View style={estilos.contatoNaLista}>
-        <Text style={estilos.textoDaLista}>{props.contato[0]} : {props.contato[1]}</Text>
-    </View>
+    <TouchableOpacity onLongPress={props.onDelete.bind(this, props.chave)}>
+      <View style={estilos.contatoNaLista}>
+          <Text style={estilos.textoDaLista}>{props.contato[0]} : {props.contato[1]}</Text>
+      </View>
+    </TouchableOpacity>
   );
 }
 
