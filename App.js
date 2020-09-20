@@ -1,3 +1,5 @@
+export default NovoLugarTela;
+
 import React, { useState } from 'react';
 import { StyleSheet, View, FlatList } from 'react-native';
 import ContatoItem from './components/ContatoItem';
