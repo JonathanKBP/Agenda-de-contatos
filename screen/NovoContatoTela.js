@@ -58,7 +58,7 @@ const NovoContatoTela = (props) => {
 
 const estilos = StyleSheet.create({
   lembreteView: {
-    marginBottom: 5
+    margin: 5
   },
   text:{
     

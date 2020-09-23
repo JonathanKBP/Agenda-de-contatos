@@ -3,6 +3,7 @@ import { createStackNavigator } from "react-navigation-stack";
 import { createAppContainer } from 'react-navigation';
 import ListaDeContatoTela from '../screen/ListaDeConatatoTela';
 import NovoContatoTela from '../screen/NovoContatoTela';
+import Cores from "../constantes/Cores";
 
 const ContatoNavigator = createStackNavigator ({
   ListaDeContatos: ListaDeContatoTela,
@@ -17,3 +18,4 @@ const ContatoNavigator = createStackNavigator ({
 });
 
 export default createAppContainer(ContatoNavigator);
+
