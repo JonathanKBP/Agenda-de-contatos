@@ -1,17 +1,32 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import {
   View,
   StyleSheet,
-  Text, Platform
+  FlatList, 
+  Platform
 } from 'react-native';
+
 import { HeaderButtons, Item } from 'react-navigation-header-buttons';
 import BotaoCabecalho from '../components/BotaoCabecalho';
+import ContatoItem from '../components/ContatoItem';
+import NovoContatoTela from './NovoContatoTela';
 
 const ListaDeContatoTela = (props) => {
+  const listas = ["test", "test", "test", "test"] 
   return (
     <View>
-      <Text>ListaDeContatoTela</Text>
+      <FlatList 
+        data={listas}
+        renderItem={
+          contato => (
+            <ContatoItem
+              chave={contato.item.key} 
+              contato={contato.item.value}
+            />
+          )
+        }
+      />
     </View>
   )
 }
