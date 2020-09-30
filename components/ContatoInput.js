@@ -58,7 +58,7 @@ const ContatoInput = (props) => {
 
 const estilos = StyleSheet.create({
   lembreteView: {
-    margin: 5
+    marginBottom: 5
   },
   text:{
     
