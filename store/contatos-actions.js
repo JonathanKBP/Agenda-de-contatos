@@ -1,5 +1,6 @@
 import * as FileSystem from 'expo-file-system';
 export const ADD_CONTATO = 'ADD_CONTATO';
+export const LISTA_CONTATOS = 'LISTA_CONTATOS';
 
 import { buscarContatos, inserirContato } from '../helpers/db';
 

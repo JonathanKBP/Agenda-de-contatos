@@ -21,7 +21,7 @@ export const init = () => {
   return promise;
 }
 
-export const inserirContato = (nomeContato, imagemURI, numeroContato) => {
+export const inserirContato = (nomeContato, numeroContato, imagemURI) => {
   const promise = new Promise((resolve, reject) => {
     db.transaction((tx) => {
       tx.executeSql(
