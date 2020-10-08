@@ -24,16 +24,3 @@ export default (estado = estadoInicial, action) => {
   }
 }
 
-export const buscarContatos = () => {
-  const promise = new Promise ((resolve, reject) => {
-    db.transaction((tx) => {
-      tx.executeSql(
-        `SELECT * FROM tb_contato;`,
-        [],
-        (_, resultado) => {resolve(resultado)},
-        (_, err) => {reject(err)}
-      );
-    })
-  });
-  return promise;
-}
