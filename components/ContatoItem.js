@@ -1,6 +1,7 @@
 import React from 'react';
 import {View, Text, StyleSheet, TouchableOpacity, Image, } from 'react-native';
 import Cores from '../constantes/Cores';
+
 const ContatoItem = (props) => {
 
   return (

@@ -1,4 +1,4 @@
-import React, { useState} from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   View,
   StyleSheet,
@@ -9,11 +9,18 @@ import { HeaderButtons, Item } from 'react-navigation-header-buttons';
 import BotaoCabecalho from '../components/BotaoCabecalho';
 import { Platform } from "react-native";
 import ContatoItem from '../components/ContatoItem';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+
+import * as contatosActions from '../store/contatos-actions';
 
 const ListarContatosTela = (props) => {
 
   const contatos = useSelector(estado => estado.contatos.contatos);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(contatosActions.listarContatos())
+  }, [dispatch]);
 
   return (
 
