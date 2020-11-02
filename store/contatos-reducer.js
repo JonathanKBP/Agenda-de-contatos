@@ -10,7 +10,6 @@ export default (estado = estadoInicial, action) => {
     case ADD_CONTATO:
       //const contato = new Contato (new Date().toString(), action.dadosContato.nomeContato, action.dadosContato.numeroContato, action.dadosContato.imagemURI)
       const contato = new Contato (action.dadosContato.id.toString(), action.dadosContato.nomeContato, action.dadosContato.numeroContato, action.dadosContato.imagemURI )
-      console.log(contato);
       return {
         contatos: estado.contatos.concat(contato)
       }
