@@ -10,10 +10,10 @@ import { init } from './helpers/db';
 
 init()
 .then(() => {
-  console.log("🚀 criação da base feita com sucesso");
+  console.log("criação da base feita com sucesso");
 })
 .catch((err) => {
-  console.log(`🤔 Criação da base falhou: ${err}`);
+  console.log(`Criação da base falhou: ${err}`);
 })
 
 const rootReducer = combineReducers({
